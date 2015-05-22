@@ -872,6 +872,14 @@ body {
   top: 15px;
   right: 15px;
 }
+@media screen and (max-width: 782px) {
+  .main-content .comments-area ul.comment-list li.comment .comment-body .reply {
+    position: relative;
+    text-align: right;
+    top: 0;
+    right: 0;
+  }
+}
 .main-content .comments-area ul.comment-list li.comment .comment-body .reply .comment-reply-link {
   display: inline-block;
   padding: 6px 12px;
