@@ -66,7 +66,7 @@ get_header(); ?>
                         <h2><i class="fa fa-trophy fa-fw"></i> Spelers van de week</h2>
                         <a class="more-link" data-toggle="tooltip" data-placement="top"
                            title="Ingelogd in de laaste 30 dagen">
-                            <i class="fa fa-info-circle"></i>
+                            <i class="fa fa-info-circle fa-fw"></i>
                         </a>
                     </div>
                     <!-- Start Inner -->
