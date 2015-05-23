@@ -26,7 +26,7 @@
 
                    <!-- Start Player List -->
                     <div class="twitch-list">
-                        <a href="http://www.twitch.tv/dutchdota" class="animated firstload">
+                        <a href="http://www.twitch.tv/dutchdota" target="_blank" class="animated firstload">
                             <i class="fa fa-play-circle"></i>
                             <img class="stream-image"
                                  src="<?php echo get_template_directory_uri().'/assets/img/dd-no-twitch.jpg'; ?>">

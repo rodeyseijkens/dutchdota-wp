@@ -32,6 +32,17 @@ if ( post_password_required() )
 
 	<?php endif; // have_comments() ?>
 
-	<?php comment_form(); ?>
+	<?php
+
+	$args = array(
+		'comment_field' =>  '<p class="comment-form-comment"><label class="hidden-sm" for="comment">' . _x( 'Comment', 'noun' ) .
+			'</label><textarea id="comment" name="comment" cols="40" rows="8" aria-required="true">' .
+			'</textarea></p>',
+	);
+
+
+	comment_form($args);
+
+	?>
 
 </div><!-- #comments -->

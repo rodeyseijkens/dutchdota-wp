@@ -866,23 +866,24 @@ body {
           position: relative;
           min-height: 90px;
 
-          .comment-author {
-            img.avatar {
-              float: left;
-              width: 60px;
-              height: 60px;
-              margin-right: 10px;
-            }
-
-            .fn {
-              font-weight: 700;
-              font-size: 14px;
-              font-style: normal;
+          @media screen and (max-width: 520px) {
+            .media-left {
+              display: none;
             }
           }
+
+          h6 {
+            font-weight: 700;
+            font-size: 14px;
+            font-style: normal;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
           .comment-meta {
             font-size: 10px;
             font-style: italic;
+            margin-bottom: 5px;
 
             a {
               color: #DDD;
@@ -896,16 +897,7 @@ body {
             font-size: 12px;
           }
           .reply {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-
-            @media screen and (max-width: 782px) {
-              position: relative;
-              text-align: right;
-              top: 0;
-              right: 0;
-            }
+            float: right;
 
             .comment-reply-link {
               display: inline-block;
@@ -951,6 +943,15 @@ body {
       }
     }
     .comment-respond {
+      form {
+        &>div {
+          margin-left: 47px !important;
+
+          @media screen and (max-width: 993px) {
+            margin-left: 0 !important;
+          }
+        }
+      }
       .logged-in-as {
         display: none;
         visibility: hidden;
@@ -984,6 +985,10 @@ body {
 
           font-size: 0px;
 
+          @media screen and (max-width: 520px) {
+            display: none;
+          }
+
           &:before {
             content: "\f075";
             font-size: 16px;
@@ -994,7 +999,13 @@ body {
         }
       }
       .form-submit {
-        text-align: right;
+        margin-left: 47px;
+        margin-bottom: 25px;
+
+        @media screen and (max-width: 993px) {
+          margin-left: 0px;
+        }
+
         input.submit {
           display: inline-block;
           padding: 6px 12px;
@@ -1028,6 +1039,7 @@ body {
           border-radius: 5px 5px 5px 5px;
           border: none;
           background-color: #FF5B5B;
+          outline: none;
 
           &:hover {
             background-color: #F77A35;
