@@ -555,6 +555,28 @@ body {
 .main-content .nieuws-container .body .thumbnail.post.category-cosmetica .category-icon:before {
   content: "\f219";
 }
+.main-content .svdw-container .svdw-buttons {
+  background-color: #DDD;
+  margin-bottom: 15px;
+}
+.main-content .svdw-container .svdw-buttons ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.main-content .svdw-container .svdw-buttons ul li {
+  list-style: none;
+  float: left;
+  padding: 5px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.5s cubic-bezier(0.4, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+.main-content .svdw-container .svdw-buttons ul li:hover,
+.main-content .svdw-container .svdw-buttons ul li.active {
+  background-color: #FFF;
+}
 .main-content .svdw-container .body .row {
   margin-right: 0;
   margin-left: 0;

@@ -525,6 +525,30 @@ body {
   }
 
   .svdw-container {
+    .svdw-buttons {
+      background-color: #DDD;
+      margin-bottom: 15px;
+
+      ul {
+        float: left;
+        margin: 0;
+        padding: 0;
+
+        li {
+          list-style: none;
+          float: left;
+          padding: 5px 10px;
+          font-size: 11px;
+          cursor: pointer;
+          transition: background .5s cubic-bezier(0.4, 0, 0, 0.6);
+          text-transform: uppercase;
+
+          &:hover, &.active {
+            background-color: #FFF;
+          }
+        }
+      }
+    }
     .body {
       .row {
         margin-right: 0;

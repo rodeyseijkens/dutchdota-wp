@@ -70,6 +70,7 @@ get_header(); ?>
                         </a>
                     </div>
                     <!-- Start Inner -->
+                    <div class="hidden-xs hidden-sm hidden-md col-lg-12 svdw-buttons"></div>
                     <div class="body">
                         <div class="row">
 

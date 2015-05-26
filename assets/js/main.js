@@ -38,14 +38,38 @@
         var type = ["kills", "assists", "gold_per_min", "xp_per_min", "last_hits", "denies", "hero_healing", "tower_damage", "hero_damage", "gold_spent"];
         var limit = 3;
         var order = 'desc';
+        var current_svdw_type = 0;
+        var svdwTimeout;
 
-        function runSvdwRotation() {
+        setButtons();
+
+        function setButtons() {
+            $('.svdw-buttons').append($('<ul/>'));
+
             $.each(type, function (index) {
-                setTimeout(function () {
+                var type_name = type[index].replace("_", " ");
+                type_name = type_name.replace("per_", "/ ");
+
+                $('.svdw-buttons ul').append($('<li data-type="'+type[index]+'">'+type_name+'</li>'));
+            });
+
+            $('.svdw-buttons ul li').click(function(){
+                clearTimeout(svdwTimeout);
+
+                current_svdw_type = type.indexOf($(this).attr('data-type'));
+
+                $('.svdw-buttons ul li').removeClass('active');
+                $('.svdw-buttons ul li[data-type*="'+type[current_svdw_type]+'"]').addClass('active');
+
+                runSvdwRotation(14000);
+            });
+        }
+
+        function runSvdwRotation(delay) {
 
                     svdwAnimateOut(function () {
 
-                        getSvdwData(type[index], function (data) {
+                        getSvdwData(type[current_svdw_type], function (data) {
                             var players = data.players;
 
                             //PUT DATA
@@ -70,25 +94,28 @@
 
                             });
 
+
+                            $('.svdw-buttons ul li').removeClass('active');
+                            $('.svdw-buttons ul li[data-type*="'+type[current_svdw_type]+'"]').addClass('active');
+
                             svdwAnimateIn(function () {
-
-                                if (index == type.length - 1) {
-                                    setTimeout(function () {
-
-                                        runSvdwRotation();
-
-                                    }, 7000);
+                                if (current_svdw_type == type.length - 1) {
+                                    current_svdw_type = 0;
+                                } else {
+                                    current_svdw_type++;
                                 }
+
+                                svdwTimeout = setTimeout(function () {
+
+                                    runSvdwRotation(0);
+
+                                }, 7000 + delay);
 
                             });
 
                         });
 
                     });
-
-
-                }, 7000 * index);
-            });
         }
 
         function svdwAnimateOut(callback) {
