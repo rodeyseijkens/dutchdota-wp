@@ -162,7 +162,7 @@
         }
 
         // Run
-        runSvdwRotation();
+        runSvdwRotation(2000);
 
     }
 
