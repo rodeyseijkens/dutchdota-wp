@@ -21,8 +21,21 @@ get_header(); ?>
                     <div class="carousel-inner" role="listbox">
                         <?php
                         $count = 0;
-                        $recent = wp_get_recent_posts();
-                        while ($count < 8) {
+                        $numberposts = 8;
+
+                        $args = array(
+                            'numberposts' => $numberposts,
+                            'offset' => 0,
+                            'category' => 0,
+                            'orderby' => 'post_date',
+                            'order' => 'DESC',
+                            'post_type' => 'post',
+                            'post_status' => 'publish',
+                            'suppress_filters' => true );
+
+
+                        $recent = wp_get_recent_posts($args);
+                        while ($count < $numberposts) {
                             ?>
                             <!-- Start Image Blocks -->
                             <?php
@@ -193,8 +206,22 @@ get_header(); ?>
                 <div class="body row">
                     <?php
                     $count = 0;
-                    $recent = wp_get_recent_posts();
-                    while ($count < 3) {
+                    $numberposts = 3;
+
+                    $args = array(
+                        'numberposts' => $numberposts,
+                        'offset' => 0,
+                        'category' => 0,
+                        'orderby' => 'post_date',
+                        'order' => 'DESC',
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'suppress_filters' => true );
+
+
+                    $recent = wp_get_recent_posts($args);
+
+                    while ($count < $numberposts) {
                     ?>
                     <!-- Start News Blocks -->
                     <?php
