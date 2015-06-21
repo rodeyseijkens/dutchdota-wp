@@ -18,7 +18,12 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<meta name="author" content="Dutch Dota">
-	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png">
+
+	<!-- Icons -->
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png">
+    <meta name="msapplication-square70x70logo" content="<?php echo get_template_directory_uri(); ?>/assets/img/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="<?php echo get_template_directory_uri(); ?>/assets/img/mstile-150x150.png">
 
 	<!-- Dutch Dota core CSS --><!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
