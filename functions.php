@@ -31,6 +31,22 @@ function register_my_menus() {
 }
 
 // =========================================================================
+// THEME CONTENT FIXES
+// =========================================================================
+function wrap_embed_with_div($html, $url, $attr) {
+
+	return '<div class="embed-container">' . $html . '</div>';
+
+}
+add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3); // ADD DIV AROUND EMBEDED STUFF
+
+function filter_ptags_on_images($content){
+	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images'); // REMOVE P AROUND IMAGES
+
+
+// =========================================================================
 // REGISTER THEME POST THUMBNAILS
 // =========================================================================
 add_theme_support( 'post-thumbnails' );

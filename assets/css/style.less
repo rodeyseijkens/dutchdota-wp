@@ -450,7 +450,7 @@ body {
     margin-bottom: 60px;
     background: #DDD;
 
-    &>img {
+    & > img {
       float: left;
       margin-right: 10px;
       height: 65px;
@@ -817,7 +817,7 @@ body {
         margin-left: 30px;
       }
 
-      &>p {
+      & > p {
         margin-right: 30px;
         margin-left: 30px;
         margin-bottom: 20px;
@@ -829,6 +829,27 @@ body {
       img {
         max-width: 100%;
         height: auto;
+        padding-bottom: 20px;
+
+        &.alignnone, &.aligncenter {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+
+      .embed-container {
+        position: relative;
+        padding-top: 56.25%;
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          position: absolute;
+        }
       }
 
       .meta {
@@ -981,7 +1002,7 @@ body {
     }
     .comment-respond {
       form {
-        &>div {
+        & > div {
           margin-left: 47px !important;
 
           @media screen and (max-width: 993px) {
@@ -1096,7 +1117,6 @@ body {
       margin: 0 15px 15px 15px;
     }
   }
-
 
   @media (max-width: 430px) {
     padding: 0 20px 30px 20px;
@@ -1399,10 +1419,12 @@ body {
   float: left;
   margin: 5px 20px 10px 0;
 }
+
 .alignright {
   float: right;
   margin: 5px 0 10px 20px;
 }
+
 .aligncenter {
   display: block;
   margin: 5px auto 5px auto;
@@ -1521,29 +1543,35 @@ body {
   visibility: hidden;
 }
 
-
 /*---------------------------------
 	MEJS
 -----------------------------------*/
 .wp-video {
   width: auto !important;
 }
+
 .mejs-container {
   width: 100% !important;
   height: auto !important;
   padding-top: 57%;
 }
+
 .mejs-overlay, .mejs-poster {
   width: 100% !important;
   height: 100% !important;
 }
+
 .mejs-mediaelement video {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100% !important;
   height: 100% !important;
 }
+
 .mejs-container, .mejs-embed, .mejs-embed body {
-  background:transparent!important;
+  background: transparent !important;
   outline: none;
 }
