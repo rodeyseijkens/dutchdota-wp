@@ -45,7 +45,7 @@ get_header(); ?>
 
                         <div id="post-<?php echo get_the_ID(); ?>" <?php post_class(); ?>>
 
-                            <a class="post-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(850, 478)); ?></a>
+                            <a class="post-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(850, 350)); ?></a>
 
                             <?php the_date('j F', '<span class="date">', '</span>'); ?>
 
