@@ -44,9 +44,13 @@ get_header(); ?>
                             <a href="<?php echo get_permalink($ID); ?>" class="item <?php if ($count == 0) {
                                 echo 'active';
                             } ?>">
-                                <?php echo get_the_post_thumbnail($ID, array(850, 350)); ?>
+                                <?php
+                                echo get_the_post_thumbnail($ID, array(850, 350));
+
+                                $videoEmbed = get_post_meta($ID, 'main-video', true); // Get the main-video from post field
+                                ?>
                                 <div class="carousel-caption">
-                                    <h3><?php echo $recent[$count]["post_title"]; ?></h3>
+                                    <h3><?php if($videoEmbed != ''){ echo '<i class="fa fa-play-circle"></i>'; } echo $recent[$count]["post_title"]; ?></h3>
                                 </div>
                             </a>
                             <!-- End Image Blocks -->
