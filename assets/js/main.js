@@ -250,4 +250,13 @@
     }
 
 
+    /*---------------------------------
+     YOUTUBE THUMBNAIL POST
+     -----------------------------------*/
+    if ($('.post-thumbnail.main-video').length) {
+        $('.post-thumbnail.main-video').click(function(){
+            $('.post-thumbnail.main-video').addClass('active');
+        });
+    }
+
 })(jQuery);

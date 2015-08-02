@@ -238,6 +238,16 @@ get_header(); ?>
                         <!-- Content -->
                         <div id="post-<?php echo $ID; ?>" <?php post_class("thumbnail", $ID); ?>>
                             <a href="<?php echo get_permalink($ID); ?>">
+
+                                <?php
+                                $videoEmbed = get_post_meta($ID, 'main-video', true); // Get the main-video from post field
+
+                                // Check if it isset
+                                if($videoEmbed != '') {
+                                 echo '<i class="fa fa-youtube-play"></i>';
+                                }
+                                ?>
+
                                 <?php echo get_the_post_thumbnail($ID, array(850, 350)); ?>
                             </a>
 
