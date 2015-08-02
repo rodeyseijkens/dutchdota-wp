@@ -246,18 +246,12 @@ get_header(); ?>
                                 <?php
                                 $videoEmbed = get_post_meta($ID, 'main-video', true); // Get the main-video from post field
 
-                                // Check if it isset
-                                if($videoEmbed != '') {
-                                 echo '<i class="fa fa-youtube-play"></i>';
-                                }
-                                ?>
-
-                                <?php echo get_the_post_thumbnail($ID, array(850, 350)); ?>
+                                echo get_the_post_thumbnail($ID, array(850, 350)); ?>
                             </a>
 
                             <div class="caption">
                                 <h3>
-                                    <a href="<?php echo get_permalink($ID); ?>"><?php echo $recent[$count]["post_title"]; ?></a>
+                                    <a href="<?php echo get_permalink($ID); ?>"><?php if($videoEmbed != ''){ echo '<i class="fa fa-play-circle"></i>'; } echo $recent[$count]["post_title"]; ?></a>
                                 </h3>
 
                                 <p class="post-info">

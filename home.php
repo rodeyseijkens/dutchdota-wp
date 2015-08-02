@@ -51,20 +51,12 @@ get_header(); ?>
                                 <?php
                                 $videoEmbed = get_post_meta(get_the_ID(), 'main-video', true); // Get the main-video from post field
 
-                                // Check if it isset
-                                if($videoEmbed != '') {
-                                    ?>
-                                    <i class="fa fa-youtube-play"></i>
-                                    <?php
-                                }
-                                ?>
-
-                                <?php the_post_thumbnail(array(850, 350)); ?>
+                                the_post_thumbnail(array(850, 350)); ?>
                             </a>
 
                             <?php the_date('j F', '<span class="date">', '</span>'); ?>
 
-                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <h2><a href="<?php the_permalink(); ?>"><?php if($videoEmbed != ''){ echo '<i class="fa fa-play-circle"></i>'; } the_title(); ?></a></h2>
 
                             <div class="hidden-xs hidden-sm">
                                 <?php the_excerpt(); ?>
