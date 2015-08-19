@@ -21,26 +21,26 @@
                 <div class="header">
                     <h2><i class="fa fa-twitch fa-fw"></i> Leden op Twitch</h2>
                 </div>
-               <!-- Start Inner -->
+                <!-- Start Inner -->
                 <div class="body">
 
-                   <!-- Start Player List -->
+                    <!-- Start Player List -->
                     <div class="twitch-list">
                         <a href="http://www.twitch.tv/dutchdota" target="_blank" class="animated firstload">
                             <i class="fa fa-play-circle"></i>
                             <img class="stream-image"
-                                 src="<?php echo get_template_directory_uri().'/assets/img/dd-no-twitch.jpg'; ?>">
+                                 src="<?php echo get_template_directory_uri() . '/assets/img/dd-no-twitch.jpg'; ?>">
                             <img class="profile-image"
-                                 src="<?php echo get_template_directory_uri().'/assets/img/dd-profile.jpg'; ?>">
-                            <h5 class="profile-name"><?php _e('No streams...', 'dutchdotawp');?></h5>
+                                 src="<?php echo get_template_directory_uri() . '/assets/img/dd-profile.jpg'; ?>">
+                            <h5 class="profile-name"><?php _e('No streams...', 'dutchdotawp'); ?></h5>
 
-                            <p class="stream-text"><?php _e('Zero live streams', 'dutchdotawp');?></p>
+                            <p class="stream-text"><?php _e('Zero live streams', 'dutchdotawp'); ?></p>
                         </a>
                     </div>
 
                 </div>
             </div>
-           <!-- End Twitch List -->
+            <!-- End Twitch List -->
 
         </div>
         <div class="hidden-xs col-sm-6 col-md-4 col-lg-3">
@@ -90,7 +90,14 @@
         <div class="hidden-xs hidden-sm hidden-md col-lg-3">
 
             <!-- Start Facebook -->
-
+            <div class="fb-page" data-href="https://www.facebook.com/dutchdota" data-small-header="false"
+                 data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"
+                 data-show-posts="false">
+                <div class="fb-xfbml-parse-ignore">
+                    <blockquote cite="https://www.facebook.com/dutchdota"><a href="https://www.facebook.com/dutchdota">Dutch
+                            Dota</a></blockquote>
+                </div>
+            </div>
             <!-- End Facebook -->
 
         </div>
@@ -138,6 +145,16 @@
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Facebook JS -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.4&appId=438723776334468";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 <?php wp_footer(); ?>
 
