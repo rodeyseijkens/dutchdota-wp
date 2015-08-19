@@ -35,6 +35,9 @@
 		echo '<link href="'.get_template_directory_uri().'/assets/css/bbpress.css" rel="stylesheet">';
 	}?>
 
+	<!-- Appear on Google as Snippet -->
+	<link rel="publisher" href="https://plus.google.com/110649499544651664500/">
+
 	<!-- Start WP Head -->
 	<?php wp_head(); ?>
 </head>
