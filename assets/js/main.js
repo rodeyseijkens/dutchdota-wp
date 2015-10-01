@@ -178,7 +178,7 @@
 
                 setTimeout(function () {
 
-                    twitchListAnimateOut(function () {
+                    twitchListAnimateOut(twitch_list, function () {
 
                         //PUT DATA
                         $('.twitch-list a').attr('href', twitch_list[index]['twitch_data']['url']).attr('target', "_blank");
@@ -187,7 +187,7 @@
                         $('.twitch-list a .profile-name').text(twitch_list[index]['display_name']);
                         $('.twitch-list a .stream-text').text(twitch_list[index]['twitch_data']['status']);
 
-                        twitchListAnimateIn(function () {
+                        twitchListAnimateIn(twitch_list, function () {
                             if (index == twitch_list.length - 1) {
                                 setTimeout(function () {
 
@@ -206,7 +206,7 @@
         });
     }
 
-    function twitchListAnimateOut(callback) {
+    function twitchListAnimateOut(twitch_list, callback) {
         if ($('.twitch-list a').hasClass('firstload')) {
 
             setTimeout(function () {
@@ -214,7 +214,10 @@
             }, 1000);
 
         } else {
-            $('.twitch-list a').removeClass('fadeIn');
+            console.log('animate', twitch_list.length);
+            if(twitch_list.length != 1) {
+                $('.twitch-list a').removeClass('fadeIn');
+            }
 
             setTimeout(function () {
                 callback();
@@ -222,7 +225,7 @@
         }
     }
 
-    function twitchListAnimateIn(callback) {
+    function twitchListAnimateIn(twitch_list, callback) {
         $('.twitch-list a').removeClass('firstload');
         $('.twitch-list a').addClass('fadeIn');
 
