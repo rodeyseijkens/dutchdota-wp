@@ -214,7 +214,6 @@
             }, 1000);
 
         } else {
-            console.log('animate', twitch_list.length);
             if(twitch_list.length != 1) {
                 $('.twitch-list a').removeClass('fadeIn');
             }
