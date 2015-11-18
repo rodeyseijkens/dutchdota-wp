@@ -151,7 +151,7 @@
         });
     }
 
-    if ($('.svdw-container').length) {
+    if ($('.svdw-container').length > 0) {
 
         var type = ["kills", "assists", "gold_per_min", "xp_per_min", "last_hits", "denies", "hero_healing", "tower_damage", "hero_damage", "gold_spent"];
         var limit = 3;
@@ -246,7 +246,7 @@
         });
     }
 
-    if ($('.twitch-list').length) {
+    if ($('.twitch-list').length > 0) {
         runTwitchListAnimation();
     }
 
@@ -254,7 +254,7 @@
     /*---------------------------------
      YOUTUBE THUMBNAIL POST
      -----------------------------------*/
-    if ($('.post-thumbnail.main-video').length) {
+    if ($('.post-thumbnail.main-video').length > 0) {
         $('.post-thumbnail.main-video').click(function(){
             $('.post-thumbnail.main-video').addClass('active');
         });
