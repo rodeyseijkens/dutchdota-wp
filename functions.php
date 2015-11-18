@@ -219,6 +219,15 @@ function dutchdotawp_widgets_init() {
 		'before_title'  => '<div class="header row"><h2>',
 		'after_title'   => '</div><div class="body row"><div class=" col-xs-12">',
 	) );
+	register_sidebar( array(
+		'name' => __( 'Sidebar Sportspress', 'dutchdotawp' ),
+		'id' => 'right-sidebar-sportspress',
+		'description' => __( 'Widgets in this area will be shown on sportspress pages.', 'dutchdotawp' ),
+		'before_widget' => '<div id="%1$s" class="widget col-xs-12 %2$s">',
+		'after_widget'  => '</div></div></div>',
+		'before_title'  => '<div class="header row"><h2>',
+		'after_title'   => '</div><div class="body row"><div class=" col-xs-12">',
+	) );
 }
 
 
