@@ -180,6 +180,16 @@
   height: 80px;
   width: 80px;
   margin: 0;
+  padding: 0;
+  border: 2px solid transparent;
+  transition: border .3s;
+}
+.widget_sportspress.widget_sp_countdown .sp-countdown-wrapper .event-name .logo-odd:hover {
+  border-color: #d16428;
+}
+.widget_sportspress.widget_sp_countdown .sp-countdown-wrapper .event-name .logo-odd img {
+  height: 100%;
+  width: 100%;
 }
 .widget_sportspress.widget_sp_countdown .sp-countdown-wrapper .event-name .logo-even {
   float: right;
@@ -188,6 +198,16 @@
   width: 80px;
   height: 80px;
   margin: 0;
+  padding: 0;
+  border: 2px solid transparent;
+  transition: border .3s;
+}
+.widget_sportspress.widget_sp_countdown .sp-countdown-wrapper .event-name .logo-even:hover {
+  border-color: #d16428;
+}
+.widget_sportspress.widget_sp_countdown .sp-countdown-wrapper .event-name .logo-even img {
+  height: 100%;
+  width: 100%;
 }
 .widget_sportspress.widget_sp_countdown .sp-countdown-wrapper .event-name a {
   text-align: center;
