@@ -135,7 +135,7 @@
 
     function getSvdwData(type, callback) {
         $.ajax({
-            url: "http://dota-api.dutchdota.com/svdw.php",
+            url: "//dota-api.dutchdota.com/svdw.php",
             dataType: 'jsonp',  //use jsonp data type in order to perform cross domain ajax
             crossDomain: true,
             data: {
@@ -235,7 +235,7 @@
 
     function getTwitchList(callback) {
         $.ajax({
-            url: "http://dota-api.dutchdota.com/users_twitch_list.php",
+            url: "//dota-api.dutchdota.com/users_twitch_list.php",
             dataType: 'jsonp',  //use jsonp data type in order to perform cross domain ajax
             crossDomain: true,
             type: 'GET',
