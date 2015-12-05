@@ -66,7 +66,7 @@
                 $('.player-stats').each(function (index) {
 
                     $(this).find('.profile').attr('src', players[index].imgurl);
-                    $(this).find('.player-name a').attr('href', "http://www.dutchdota.com/lid/"+players[index].nicename).text(players[index].name);
+                    $(this).find('.player-name a').attr('href', "/lid/"+players[index].nicename).text(players[index].name);
                     var type_name = (players[index].stats.type).replace("_", " ");
                     type_name = type_name.replace("per_", "/ ");
                     $(this).find('.main-info strong').html(type_name + ":");
